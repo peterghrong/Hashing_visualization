@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div id="container">
+            <!--Nav Bar-->
+            <div id="left_col">
+                <!--Select hash function-->
+                <div id="nav">
+                    <form id="method">
+                        <h3>
+                            <a href="http://www.cse.yorku.ca/~oz/hash.html"
+                                >Choose your hashing functions</a
+                            >
+                        </h3>
+                        <input
+                            type="radio"
+                            id="djb2"
+                            name="function"
+                            value="djb2"
+                            onclick="typable(id)"
+                        />
+                        <label for="djb2">djb2</label> <br />
+
+                        <input
+                            type="radio"
+                            id="sdbm"
+                            name="function"
+                            value="sdbm"
+                            onclick="typable(id)"
+                        />
+                        <label for="sdbm">sdbm</label> <br />
+
+                        <input
+                            type="radio"
+                            id="lolo"
+                            name="function"
+                            value="lolo"
+                            onclick="typable(id)"
+                        />
+                        <label for="lolo">lose lose</label> <br />
+                    </form>
+
+                    <!--Select data type-->
+                    <form id="type">
+                        <h3>Choose your input type</h3>
+                        <input
+                            type="radio"
+                            id="string"
+                            name="type"
+                            value="string"
+                            onclick="typable(id)"
+                        />
+                        <label for="string">string</label> <br />
+
+                        <input
+                            type="radio"
+                            id="number"
+                            name="type"
+                            value="number"
+                            onclick="typable(id)"
+                        />
+                        <label for="djb2">number</label><br />
+                    </form>
+
+                    <!--Get input data-->
+                    <br />
+                    <form id="data">
+                        <!--replace type input with javascript-->
+                        <label for="input data"><h3>Raw Values</h3></label>
+                        <input
+                            id="rv"
+                            type="text"
+                            name="rv"
+                            placeholder="max length 30 characters"
+                            maxlength="30"
+                            readonly="readonly"
+                            value=""
+                        />
+                        <br />
+                        <div id="bucon">
+                            <button
+                                id="Insert"
+                                type="button"
+                                onclick="HashTable()"
+                                disabled="disabled"
+                            >
+                                Insert
+                            </button>
+                            <button
+                                id="remove"
+                                type="button"
+                                onclick="removal()"
+                                disabled="disabled"
+                            >
+                                Remove
+                            </button>
+                            <button
+                                id="lookup"
+                                type="button"
+                                onclick="lokup()"
+                                disabled="disabled"
+                            >
+                                lookup
+                            </button>
+                        </div>
+                        <br />
+                    </form>
+                </div>
+                <div class="box">
+                    <div><strong>log:</strong></div>
+                    <div class="log"></div>
+                </div>
+            </div>
+            <!--this div handles the rendering side of things, canvas-->
+            <div id="visual">
+                <!--this div handles the title box -->
+                <div id="head">
+                    <h1>
+                        Hash function visualization
+                    </h1>
+                    <hr />
+                </div>
+                <!--this div handles the canvas-->
+                <div id="background">
+                    <canvas> </canvas>
+                    <script src="functions.js"></script>
+                </div>
+                <!--<script src="canvas.js"></script>-->
+            </div>
+        </div>
+    </body>
+</html>
