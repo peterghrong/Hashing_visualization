@@ -4,7 +4,7 @@ This is a web application aimed to visualize the concepts of hash table.
 
 ## How it works
 
-User selects the relevent hash function and input type, the application will automatically generate the hash table on canvas. 
+User selects the relevent hash function and input type, this web application will automatically generate the hash table on canvas. 
 
 ## Note
 
