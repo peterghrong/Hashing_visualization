@@ -1,6 +1,6 @@
 //variables declaration
 var count_list = [];
-table = new Array(10);
+var table = new Array(10);
 
 var canvas = document.querySelector("canvas");
 var parent = document.getElementById("background");
